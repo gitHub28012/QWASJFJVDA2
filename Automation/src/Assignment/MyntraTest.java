@@ -20,7 +20,7 @@ public class MyntraTest {
 		//search jeans 
 		driver.findElement(By.className("desktop-searchBar")).sendKeys("jeans",Keys.ENTER);
 		
-		//
+		
 		
 		
 		
