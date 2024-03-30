@@ -24,6 +24,9 @@ public class AutomateInstagramLoginPage {
 		Thread.sleep(2000);
 		driver.findElement(By.className("_acap")).click();
 		
+		Thread.sleep(3000);
+		driver.quit();
+		
 		
 		
 		
