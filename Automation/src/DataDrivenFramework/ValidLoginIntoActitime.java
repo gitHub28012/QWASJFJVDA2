@@ -11,8 +11,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class ValidLoginIntoActitime {
 	
 	static WebDriver driver;
-	
-	
+
 	public static void main(String[] args) throws IOException {
 		
 		FetchingDataFromPropertyFile file = new FetchingDataFromPropertyFile();
