@@ -5,6 +5,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class InvalidLoginIntoActitime {
@@ -23,10 +24,12 @@ public class InvalidLoginIntoActitime {
 
 		String username = lib.getDataFromExcelFile("./src/test/resources/ActitmeTestData.xlsx", "InvalidCred", i, 0);
 		String password = lib.getDataFromExcelFile("./src/test/resources/ActitmeTestData.xlsx", "InvalidCred", i, 1);
-		// pass the username
+		// pass the user name
 		driver.findElement(By.name("username")).sendKeys(username);
 		driver.findElement(By.name("pwd")).sendKeys(password);
 		driver.findElement(By.id("loginButton")).click();
+		driver.findElement(By.name("username")).clear();
+		
 		
 		}
 	}
