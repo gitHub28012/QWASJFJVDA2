@@ -3,6 +3,7 @@ package TestScript;
 import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import POM.CreateNewUserPage;
@@ -10,9 +11,11 @@ import POM.HomePage;
 import POM.LoginPage;
 import POM.UserListPage;
 import genericLib.BaseTest;
+import genericLib.CustomeListener;
 import genericLib.Flib;
 import genericLib.WorkLib;
 
+@Listeners(CustomeListener.class)
 public class CreateUserTest extends BaseTest {
 	
 	@Test

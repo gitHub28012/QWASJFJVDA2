@@ -4,12 +4,16 @@ import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.UsernameAndPassword;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import POM.LoginPage;
 import genericLib.BaseTest;
+import genericLib.CustomeListener;
 import genericLib.Flib;
 
+
+@Listeners(CustomeListener.class)
 public class ValidLoginTest extends BaseTest {
 	
 	

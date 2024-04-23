@@ -10,17 +10,20 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 public class BaseTest implements IAutoConstant {
 	
 	public WebDriver driver;
+	public static WebDriver sdriver;
 
-	
+	@Parameters("browser")
 	@BeforeClass
-	public void launchBrowser() throws IOException
+	public void launchBrowser(@Optional("chrome") String browser) throws IOException
 	{
 		Flib lib = new Flib();
-		String browser = lib.getDataFromPropertyFile(PROP_PATH, "browser");
+		//String browser = lib.getDataFromPropertyFile(PROP_PATH, "browser");
 		String url = lib.getDataFromPropertyFile(PROP_PATH, "url");
 		Reporter.log("========Launching "+browser+" browser===============",true);
 		if(browser.equals("chrome"))
@@ -39,6 +42,7 @@ public class BaseTest implements IAutoConstant {
 		{
 			Reporter.log("Invalid browser",true);
 		}
+		sdriver=driver;
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMESECONDS));
 		driver.get(url);

@@ -16,7 +16,7 @@ public class LoginPage extends BaseClass {
 	private WebElement usernameTextField;
 
 	// identify password textfield
-	@FindBy(name = "pwd")
+	@FindBy(name = "pw")
 	private WebElement passwordTextField;
 
 	// keep me logged in checkbox

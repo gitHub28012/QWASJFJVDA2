@@ -37,7 +37,7 @@ public class ConfigurationAnnotation {
 
 	@Test
 	public void testScript1() {
-		Reporter.log("Test script 1 executed successfully", true);
+		Reporter.log("Test script 1 executed successfully",true);
 	}
 	
 	@Test
