@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="tests" name="ChromeTest(failed)">
-    <parameter name="browser" value="chrome"/>
+  <test thread-count="5" parallel="tests" name="Test1(failed)">
     <classes>
       <class name="TestScript.CreateUserTest">
         <methods>
@@ -12,17 +11,16 @@
         </methods>
       </class> <!-- TestScript.CreateUserTest -->
     </classes>
-  </test> <!-- ChromeTest(failed) -->
-  <test thread-count="5" parallel="tests" name="FirefoxTest(failed)">
-    <parameter name="browser" value="firefox"/>
+  </test> <!-- Test1(failed) -->
+  <test thread-count="5" parallel="tests" name="Test2(failed)">
     <classes>
-      <class name="TestScript.CreateUserTest">
+      <class name="TestScript.CreateCustomerAndProjectTest">
         <methods>
-          <include name="createUser"/>
           <include name="closeBrowser"/>
           <include name="launchBrowser"/>
+          <include name="createProjectAndCustomer"/>
         </methods>
-      </class> <!-- TestScript.CreateUserTest -->
+      </class> <!-- TestScript.CreateCustomerAndProjectTest -->
     </classes>
-  </test> <!-- FirefoxTest(failed) -->
+  </test> <!-- Test2(failed) -->
 </suite> <!-- Failed suite [Suite] -->
