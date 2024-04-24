@@ -16,7 +16,7 @@ import genericLib.WorkLib;
 
 public class CreateCustomerAndProjectTest extends BaseTest {
 
-	@Test
+	@Test(groups = {"IT","RT"})
 	public void createProjectAndCustomer() throws EncryptedDocumentException, IOException {
 		// login
 		Flib lib = new Flib();

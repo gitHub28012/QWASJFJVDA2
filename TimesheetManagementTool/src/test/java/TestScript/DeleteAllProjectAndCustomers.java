@@ -14,7 +14,7 @@ import genericLib.Flib;
 
 public class DeleteAllProjectAndCustomers extends BaseTest {
 
-	@Test
+	@Test(groups = {"RT","ST"})
 	public void deleteAll() throws EncryptedDocumentException, IOException {
 		// login
 		Flib lib = new Flib();

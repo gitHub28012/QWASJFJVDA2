@@ -18,7 +18,7 @@ import genericLib.WorkLib;
 @Listeners(CustomeListener.class)
 public class CreateUserTest extends BaseTest {
 	
-	@Test
+	@Test(groups = "RT")
 	public void createUser() throws EncryptedDocumentException, IOException
 	{
 		//login

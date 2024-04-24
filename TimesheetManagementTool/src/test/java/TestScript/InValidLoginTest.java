@@ -11,7 +11,7 @@ import genericLib.Flib;
 
 public class InValidLoginTest extends BaseTest {
 
-	@Test(description = "verify the user is able to login with different credentias or not")
+	@Test(description = "verify the user is able to login with different credentias or not", groups = "FT")
 	public void inValidLogin() throws EncryptedDocumentException, IOException {
 		Flib lib = new Flib();
 		int rowCount = lib.getRowCount(EXCEL_PATH, INVALIDSHEETNAME);
